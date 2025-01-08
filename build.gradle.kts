@@ -14,6 +14,7 @@ plugins {
     alias(libs.plugins.jetbrains.dokka) apply false
     alias(libs.plugins.jlleitschuh.ktlint) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    alias(libs.plugins.lineageos.generatebp) apply false
 }
 
 val aospLibs by extra {

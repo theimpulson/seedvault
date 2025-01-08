@@ -8,6 +8,8 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        // LineageOS doesn't publishes plugins on known maven repos
+        maven("https://raw.githubusercontent.com/lineage-next/gradle-generatebp/v1.20/.m2")
     }
 }
 

@@ -5,12 +5,14 @@
 
 import com.google.protobuf.gradle.id
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.lineageos.generatebp.GenerateBpPluginExtension
 import java.io.ByteArrayOutputStream
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.protobuf)
+    alias(libs.plugins.lineageos.generatebp)
 }
 
 val gitDescribe = {
@@ -283,4 +285,10 @@ tasks.register<Exec>("clearEmulatorAppData") {
         environment("ANDROID_HOME", android.sdkDirectory.absolutePath)
         environment("JAVA_HOME", System.getProperty("java.home"))
     }
+}
+
+configure<GenerateBpPluginExtension> {
+    targetSdk.set(android.defaultConfig.targetSdk!!)
+    minSdk.set(android.defaultConfig.minSdk!!)
+    availableInAOSP.set { true }
 }

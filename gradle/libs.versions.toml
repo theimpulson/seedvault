@@ -8,6 +8,7 @@
 androidGradlePlugin = "8.6.1"
 protobufPlugin = "0.9.4"
 ktlint = "11.5.0"
+generateBp = "1.20" # Update maven URL in settings.gradle.kts when upgrading
 
 # Android SDK versions
 compileSdk = "35"
@@ -131,3 +132,4 @@ jetbrains-dokka  = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 jetbrains-kotlin-android  = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jlleitschuh-ktlint  = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+lineageos-generatebp = { id = "org.lineageos.generatebp", version.ref = "generateBp" }
